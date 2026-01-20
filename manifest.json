@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Guard - Блокировщик отвлечений",
+  "version": "1.0.0",
+  "description": "Блокирует YouTube, Telegram Web и WhatsApp Web для повышения продуктивности",
+  "permissions": [
+    "declarativeNetRequest",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://www.youtube.com/*",
+    "*://youtube.com/*",
+    "*://web.telegram.org/*",
+    "*://web.whatsapp.com/*"
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+}
